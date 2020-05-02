@@ -1,4 +1,25 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+// переменные
+@import "blocks/variables";
+// примеси
+@import "blocks/mixins";
+// общие настройки сайта
+@import "blocks/global-options";
+// контейнер центровщик
+@import "blocks/container";
+// визуальное скрытие
+@import "blocks/visually-hidden";
+// общие настройки кнопок
+@import "blocks/button";
+@import "blocks/page-header";
+// @import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/page-main";
+@import "blocks/offer";
+@import "blocks/complexes";
+@import "blocks/features";
+// @import "blocks/example";
+// @import "blocks/contacts";
+@import "blocks/page-footer";
+// @import "blocks/program-selection";
+@import "blocks/catalog";
+// @import "blocks/additional-goods";
