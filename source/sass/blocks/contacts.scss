@@ -1,0 +1,42 @@
+.contacts--bg-grey {
+  background-color: $background-grey;
+}
+
+.contacts__address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  padding-top: 33px;
+  padding-left: 20px;
+  padding-bottom: 28px;
+}
+
+.contacts__address-appeal {
+  margin: 0;
+  width: 125px;
+  color: $font-black;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.contacts__address address {
+  width: 135px;
+  color: $font-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+}
+
+.contacts__map {
+  display: flex;
+  width: 320px;
+  height: 400px;
+  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 50%, 50% 50%;
+  background-size: 20%, 100%;
+}
