@@ -1,0 +1,118 @@
+.program-selection {
+  width: 320px;
+}
+
+.program-selection__text {
+  margin: 0;
+  width: 226px;
+  color: $font-black;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.program-selection__form {
+  margin-top: 30px;
+}
+
+.program-selection__form-list {
+  @include reset-list-style;
+}
+
+.program-selection__form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.program-selection__form-item:last-child {
+  margin-bottom: 0;
+}
+
+.program-selection__form-list--inputs {
+  margin-bottom: 23px;
+  margin-top: 21px;
+}
+
+.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]),
+.program-selection__form-group textarea[name="comments"] {
+  flex-grow: 1;
+  height: 45px;
+  padding-left: 16px;
+  color: $font-grey;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid $border-color-input;
+}
+
+.program-selection__form-group textarea[name="comments"] {
+  padding-top: 15px;
+  width: 280px;
+  height: 150px;
+}
+
+.program-selection__form-item label {
+  margin-right: 16px;
+  color: $font-medium-black;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-selection__form-list--radio {
+  width: 320px;
+  margin-left: -20px;
+  padding: 20px;
+  border: 1px solid $border-color-block;
+}
+
+.program-selection__form-group {
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  border: none;
+}
+
+.program-selection__form-title {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  color: $font-black;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 100;
+
+  &::after {
+    flex-grow: 1;
+    flex-shrink: 0;
+    content: "";
+    margin-top: 13px;
+    width: 53px;
+    height: 3px;
+    margin-left: 21px;
+    background-color: $background-green;
+  }
+}
+
+.program-selection__form-list--additionally {
+  padding-bottom: 34px;
+}
+
+.program-selection__form-button {
+  width: 100%;
+}
+
+.program-selection__form-info {
+  display: block;
+  margin-top: 22px;
+  margin-bottom: 33px;
+  color: $font-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}

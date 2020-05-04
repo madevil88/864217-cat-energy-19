@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="container">
-  <header class="page-header">
+<body>
+  <header class="page-header container">
     <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" width="191" height="38" src="img/logo-mobile.svg" alt="Интернет-магазин «Кэт энерджи»">
     </a>
@@ -30,10 +30,10 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__title">
+    <h1 class="page-main__title page-main__title--form">
       Подбор программы
     </h1>
-    <section class="program-selection">
+    <section class="program-selection container">
       <h2 class="visually-hidden">Форма для подбора программы</h2>
       <p class="program-selection__text">
         Заполните анкету и мы подберем программу питания для вашего кота
@@ -43,15 +43,15 @@
         program-selection__form-list--inputs">
           <li class="program-selection__form-item">
             <label for="name">Имя:*</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Барсик" required>
           </li>
           <li class="program-selection__form-item">
             <label for="weight">Вес (кг):*</label>
-            <input type="number" id="weight" name="weight" required>
+            <input type="number" id="weight" name="weight" placeholder="7" required>
           </li>
           <li class="program-selection__form-item">
             <label for="age">Возраст (лет):</label>
-            <input type="number" id="age" name="age">
+            <input type="number" id="age" name="age" placeholder="7">
           </li>
         </ul>
         <ul class="program-selection__form-list program-selection__form-list--radio">
@@ -70,7 +70,7 @@
         </ul>
         <fieldset class="program-selection__form-group">
           <legend class="program-selection__form-title">
-            Контактные данные (владельца кота)
+            Контактные данные<br> (владельца кота)
           </legend>
           <ul class="program-selection__form-list program-selection__form-list--contacts">
             <li class="program-selection__form-item">
@@ -87,7 +87,7 @@
           <legend class="program-selection__form-title">
             Комментарий
           </legend>
-          <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea name="comments" id="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="program-selection__form-group">
           <legend class="program-selection__form-title">
@@ -120,17 +120,19 @@
         </span>
       </form>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--bg-grey">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__address">
         <h3 class="contacts__address-appeal">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем <br>к сотрудничеству дилеров!
         </h3>
         <address>
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </address>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1585134345283!5m2!1sru!2sua" width="320" height="400" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1585134345283!5m2!1sru!2sua" width="320" height="400" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
     </section>
   </main>
   <footer class="page-footer container">

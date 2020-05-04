@@ -1,0 +1,121 @@
+.example {
+  margin-top: 42px;
+  background-color: $background-grey;
+}
+
+.example__title {
+  margin: 0;
+  padding-top: 21px;
+  margin-bottom: 21px;
+  color: $font-black;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 100;
+}
+
+.example__description {
+  margin: 0;
+  margin-right: 14px;
+  margin-bottom: 25px;
+  color: $font-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 100;
+}
+
+.example__result-columns {
+  display: flex;
+}
+
+.example__result {
+  position: relative;
+  width: 124px;
+  margin-bottom: 36px;
+  border: 1px solid #cdcdcd;
+}
+
+.example__result--days {
+  margin-left: 32px;
+}
+
+.example__result-quantity {
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+  margin-bottom: 15px;
+  color: $font-black;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.example__result-text {
+  position: absolute;
+  display: block;
+  width: 87px;
+  bottom: -18px;
+  left: 18px;
+  color: $font-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 100;
+  text-align: center;
+  background-color: $background-grey;
+}
+
+.example__result-money {
+  margin-bottom: 41px;
+  color: $font-black;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__range-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  padding-bottom: 36px;
+}
+
+.example__range-slider-button {
+  @include reset-button-style;
+  color: $font-black;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__range-slider-button--was {
+  margin-right: 19px;
+}
+
+.example__range-slider-button--become {
+  margin-left: 18px;
+}
+
+.example__range-slider-track {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.example__range-slider-track-pin {
+  @include reset-button-style;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $background-green;
+}
