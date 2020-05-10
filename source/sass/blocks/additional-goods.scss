@@ -2,7 +2,6 @@
   display: flex;
   margin: 0;
   margin-top: 31px;
-  margin-left: 20px;
   margin-bottom: 30px;
   color: $font-black;
   font-size: 24px;
@@ -22,7 +21,7 @@
 }
 
 .additional-goods__list {
-  list-style: none;
+  @include reset-list-style;
 }
 
 .additional-goods__list-item {

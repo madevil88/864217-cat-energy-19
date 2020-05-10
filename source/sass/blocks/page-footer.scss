@@ -54,3 +54,21 @@
 .page-footer__developer-link-image path {
   fill: #666666;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .page-footer__social-buttons-list {
+    border-top: none;
+    border-bottom: none;
+  }
+}
