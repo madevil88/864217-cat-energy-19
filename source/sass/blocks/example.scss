@@ -119,3 +119,9 @@
   border-radius: 3px;
   background-color: $background-green;
 }
+
+@media (min-width: $tablet-width) {
+  .example {
+    margin-top: 0;
+  }
+}

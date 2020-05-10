@@ -18,7 +18,7 @@
   text-transform: uppercase;
 }
 
-.complexes__item-image {
+.complexes__item-image-area {
   position: absolute;
   top: 24px;
   left: 22px;
@@ -28,12 +28,12 @@
   background-color: $background-green;
 }
 
-.complexes__item-image-slim {
+.complexes__item--slim .complexes__item-image {
   margin-left: 8px;
   margin-top: -2px;
 }
 
-.complexes__item-image-pro {
+.complexes__item--pro .complexes__item-image {
   max-width: none;
   margin-left: -9px;
   margin-top: 11px;
@@ -73,4 +73,112 @@
   height: 11px;
   background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .complexes {
+    margin-bottom: 50px;
+  }
+
+  .complexes__item-title {
+    margin-bottom: 10px;
+    padding-top: 81px;
+    padding-left: 55px;
+    font-size: 36px;
+  }
+
+  .complexes__item-image-area {
+    top: 92px;
+    left: auto;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .complexes__item--slim .complexes__item-image {
+    width: 140px;
+    height: 194px;
+    margin-left: 35px;
+    margin-top: -10px;
+  }
+
+  .complexes__item--pro .complexes__item-image {
+    width: 268px;
+    height: 112px;
+    margin-left: -36px;
+    margin-top: 48px;
+  }
+
+  .complexes__item-description {
+    margin-left: 55px;
+    margin-right: 270px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .complexes__item--pro .complexes__item-description {
+    margin-right: 310px;
+  }
+
+  .complexes__item-link {
+    margin-left: 55px;
+    padding-top: 61px;
+    padding-bottom: 62px;
+    font-size: 20px;
+    line-height: 20px;
+    border-top: none;
+  }
+
+  .complexes__item-link-arrow {
+    margin-top: 5px;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .complexes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .complexes__item {
+    width: 570px;
+  }
+
+  .complexes__item-title {
+    margin-bottom: 60px;
+    padding-top: 81px;
+    padding-left: 216px;
+  }
+
+  .complexes__item-image-area {
+    top: 47px;
+    left: 52px;
+    right: auto;
+    width: 100px;
+    height: 100px;
+  }
+
+  .complexes__item--slim .complexes__item-image {
+    width: 70px;
+    height: 97px;
+    margin-left: 15px;
+    margin-top: -5px;
+  }
+
+  .complexes__item--pro .complexes__item-image {
+    width: 134px;
+    height: 56px;
+    margin-left: -19px;
+    margin-top: 23px;
+  }
+
+  .complexes__item-description {
+    margin-right: 56px;
+  }
+
+  .complexes__item--pro .complexes__item-description {
+    margin-right: 74px;
+  }
 }
