@@ -62,6 +62,21 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      @include pseudo-clases;
+      width: auto;
+      height: 1px;
+      left: -30px;
+      right: -30px;
+      bottom: 0;
+      background-color: $border-color-block;
+    }
+  }
+
   .features__title {
     margin-bottom: 63px;
     font-size: 60px;
@@ -132,6 +147,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    &::after {
+      display: none;
+    }
+  }
+
   .features__list-item {
     width: 245px;
   }

@@ -20,7 +20,7 @@
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list site-list site-list--index">
         <li class="site-list__item site-list__item--active">
@@ -106,42 +106,59 @@
       <h2 class="example__title">
         Живой пример
       </h2>
-      <p class="example__description">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <div class="example__result-columns">
-        <div class="example__result example__result--weight">
-          <span class="example__result-quantity">
-            5 кг
-          </span>
-          <span class="example__result-text">
-            снижение<br> веса
-          </span>
+      <div class="example__desktop-wrapper">
+        <p class="example__description">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <div class="example__result-columns">
+          <div class="example__result example__result--weight">
+            <span class="example__result-quantity">
+              5 кг
+            </span>
+            <span class="example__result-text">
+              снижение<br> веса
+            </span>
+          </div>
+          <div class="example__result example__result--days">
+            <span class="example__result-quantity">
+              60 дней
+            </span>
+            <span class="example__result-text">
+              затрачено времени
+            </span>
+          </div>
+          <div class="example__result-money">
+            <span>Затраты на питание:</span>
+            <span>15 000 руб.</span>
+          </div>
         </div>
-        <div class="example__result example__result--days">
-          <span class="example__result-quantity">
-            60 дней
-          </span>
-          <span class="example__result-text">
-            затрачено времени
-          </span>
+        <div class="example__result-image">
+          <div class="example__result-image-before">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+              <img src="img/before-mobile@1x.png" width="320" height="240" alt="Изображение кота до диеты">
+            </picture>
+          </div>
+          <div class="example__result-image-after">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+              <img src="img/after-mobile@1x.png" width="320" height="240" alt="Изображение кота после диеты">
+            </picture>
+          </div>
         </div>
-      </div>
-      <div class="example__result-money">
-        <span>Затраты на питание:</span>
-        <span>15 000 руб.</span>
-      </div>
-      <img class="example__result-image" src="img/before-mobile@1x.png" width="320" height="240" alt="Живой пример диеты">
-      <div class="example__range-slider">
-        <button class="example__range-slider-button example__range-slider-button--was" type="button">
-          Было
-        </button>
-        <div class="example__range-slider-track">
-          <button class="example__range-slider-track-pin" type="button"></button>
+        <div class="example__range-slider">
+          <button class="example__range-slider-button example__range-slider-button--before" type="button">
+            Было
+          </button>
+          <div class="example__range-slider-track">
+            <button class="example__range-slider-track-pin" type="button"></button>
+          </div>
+          <button class="example__range-slider-button example__range-slider-button--after" type="button">
+            Стало
+          </button>
         </div>
-        <button class="example__range-slider-button example__range-slider-button--become" type="button">
-          Стало
-        </button>
       </div>
     </section>
     <section class="contacts">
@@ -151,7 +168,8 @@
           Приглашаем <br>к сотрудничеству дилеров!
         </h3>
         <address>
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          ул. Большая Конюшенная, д. 19/8
+          <span>Санкт-Петербург</span>
         </address>
       </div>
       <div class="contacts__map">

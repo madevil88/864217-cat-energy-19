@@ -90,3 +90,145 @@
   font-weight: 100;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .additional-goods {
+    margin-top: -120px;
+  }
+
+  .additional-goods__title {
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-bottom: 55px;
+
+    &::before {
+      content: "";
+      margin-top: 13px;
+      width: 30px;
+      height: 3px;
+      margin-right: 38px;
+      background-color: $background-green;
+    }
+
+    &::after {
+      margin-left: 35px;
+    }
+  }
+
+  .additional-goods__list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 28px;
+    border: 1px solid #cecece;
+    border-bottom: none;
+  }
+
+  .additional-goods__list-title {
+    padding-top: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-goods__list-features {
+    width: auto;
+  }
+
+  .additional-goods__list-features tr {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-goods__list-features td {
+    margin-left: 52px;
+  }
+
+  .additional-goods__special-offer {
+    justify-content: flex-end;
+    margin: 0 auto;
+    margin-top: 69px;
+    margin-bottom: 76px;
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+    background-position: 14% 65px, 50% 50%;
+    background-size: 8%, 100%;
+  }
+
+  .additional-goods__special-offer-description {
+    margin-bottom: 69px;
+    margin-right: 120px;
+    width: 165px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-goods__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 85px;
+  }
+
+  .additional-goods__title {
+    margin-left: -110px;
+    margin-right: -110px;
+
+    &::before {
+      width: 72px;
+    }
+  }
+
+  .additional-goods__list {
+    width: 895px;
+  }
+
+  .additional-goods__list-item {
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 16px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+  }
+
+  .additional-goods__list-title {
+    margin-bottom: 0;
+  }
+
+  .additional-goods__list-features {
+    width: 284px;
+    margin-right: 39px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .additional-goods__list-features td {
+    margin-left: 0;
+  }
+
+  .additional-goods__list-button {
+    width: 245px;
+    margin: 0;
+  }
+
+  .additional-goods__special-offer {
+    margin: 0;
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@1x.jpg");
+    background-position: 50% 65px, 50% 50%;
+    background-size: 20%, 100%;
+  }
+
+  .additional-goods__special-offer-description {
+    margin-bottom: 43px;
+    margin-right: 43px;
+    text-align: center;
+  }
+}
