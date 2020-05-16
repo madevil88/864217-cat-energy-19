@@ -11,3 +11,15 @@
   padding-left: 0;
   margin-left: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title--form {
+    margin-left: 0;
+  }
+}

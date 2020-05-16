@@ -20,7 +20,7 @@
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
@@ -45,45 +45,46 @@
         Заполните анкету и мы подберем программу питания для вашего кота
       </p>
       <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="get">
-        <ul class="program-selection__form-list
-        program-selection__form-list--inputs">
-          <li class="program-selection__form-item">
-            <label for="name">Имя:*</label>
-            <input type="text" id="name" name="name" placeholder="Барсик" required>
-          </li>
-          <li class="program-selection__form-item">
-            <label for="weight">Вес (кг):*</label>
-            <input type="number" id="weight" name="weight" placeholder="7" required>
-          </li>
-          <li class="program-selection__form-item">
-            <label for="age">Возраст (лет):</label>
-            <input type="number" id="age" name="age" placeholder="7">
-          </li>
-        </ul>
-        <ul class="program-selection__form-list program-selection__form-list--radio">
-          <li class="program-selection__form-item">
-            <input type="radio" id="weight-loss" name="complex" value="weight-loss" checked>
-            <label for="weight-loss">Похудение</label>
-          </li>
-          <li class="program-selection__form-item">
-            <input type="radio" id="weight-gain" name="complex" value="weight-gain">
-            <label for="weight-gain">Набор массы</label>
-          </li>
-          <li class="program-selection__form-item">
-            <input type="radio" id="i-don't-know" name="complex" value="i-don't-know">
-            <label for="i-don't-know">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
+        <div class="program-selection__wrapper">
+          <ul class="program-selection__form-list program-selection__form-list--inputs">
+            <li class="program-selection__form-item">
+              <label for="name">Имя:*</label>
+              <input type="text" id="name" name="name" placeholder="Барсик" required>
+            </li>
+            <li class="program-selection__form-item">
+              <label for="weight">Вес (кг):*</label>
+              <input type="number" id="weight" name="weight" placeholder="7" required>
+            </li>
+            <li class="program-selection__form-item">
+              <label for="age">Возраст (лет):</label>
+              <input type="number" id="age" name="age" placeholder="7">
+            </li>
+          </ul>
+          <ul class="program-selection__form-list program-selection__form-list--radio">
+            <li class="program-selection__form-item">
+              <input class="visually-hidden" type="radio" id="weight-loss" name="complex" value="weight-loss" checked>
+              <label for="weight-loss">Похудение</label>
+            </li>
+            <li class="program-selection__form-item">
+              <input class="visually-hidden" type="radio" id="weight-gain" name="complex" value="weight-gain">
+              <label for="weight-gain">Набор массы</label>
+            </li>
+            <li class="program-selection__form-item">
+              <input class="visually-hidden" type="radio" id="i-don't-know" name="complex" value="i-don't-know">
+              <label for="i-don't-know">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </div>
         <fieldset class="program-selection__form-group">
           <legend class="program-selection__form-title">
             Контактные данные<br> (владельца кота)
           </legend>
           <ul class="program-selection__form-list program-selection__form-list--contacts">
-            <li class="program-selection__form-item">
+            <li class="program-selection__form-item program-selection__form-item--email">
               <label for="email">E-mail:*</label>
               <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
             </li>
-            <li class="program-selection__form-item">
+            <li class="program-selection__form-item program-selection__form-item--phone">
               <label for="phone">Телефон:*</label>
               <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
             </li>
@@ -101,29 +102,31 @@
           </legend>
           <ul class="program-selection__form-list program-selection__form-list--additionally">
             <li class="program-selection__form-item">
-              <input type="checkbox" id="sweetener" name="sweetener" checked>
+              <input class="visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
               <label for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="program-selection__form-item">
-              <input type="checkbox" id="water" name="water">
+              <input class="visually-hidden" type="checkbox" id="water" name="water">
               <label for="water">Питьевая вода</label>
             </li>
             <li class="program-selection__form-item">
-              <input type="checkbox" id="milk" name="milk">
+              <input class="visually-hidden" type="checkbox" id="milk" name="milk">
               <label for="milk">Молоко</label>
             </li>
             <li class="program-selection__form-item">
-              <input type="checkbox" id="vitamins" name="vitamins" required>
+              <input class="visually-hidden" type="checkbox" id="vitamins" name="vitamins" required>
               <label for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
-        <a class="program-selection__form-button button" href="order.html">
-          Отправить заявку
-        </a>
-        <span class="program-selection__form-info">
-          * — Обязательные поля
-        </span>
+        <div class="program-selection__bottom-wrapper">
+          <a class="program-selection__form-button button" href="order.html">
+            Отправить заявку
+          </a>
+          <span class="program-selection__form-info">
+            * — Обязательные поля
+          </span>
+        </div>
       </form>
     </section>
     <section class="contacts contacts--bg-grey">
@@ -133,7 +136,8 @@
           Приглашаем <br>к сотрудничеству дилеров!
         </h3>
         <address>
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          ул. Большая Конюшенная, д. 19/8
+          <span>Санкт-Петербург</span>
         </address>
       </div>
       <div class="contacts__map">
