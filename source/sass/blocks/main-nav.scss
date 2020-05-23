@@ -6,7 +6,7 @@
 .main-nav__toggle {
   @include reset-button-style;
   position: absolute;
-  top: -68px;
+  top: -65px;
   right: 0;
   width: 65px;
   height: 65px;
@@ -48,7 +48,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    margin-top: 14px;
+    margin-top: 9px;
   }
 
   .main-nav__toggle {
@@ -58,6 +58,6 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    margin-top: 35px;
+    margin-top: 33px;
   }
 }

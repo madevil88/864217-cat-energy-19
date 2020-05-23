@@ -4,27 +4,37 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 21px;
+  line-height: 19px;
   font-weight: 500;
   color: $font-black;
 }
 
 .site-list__item a {
   display: block;
-  padding: 24px;
+  padding: 23px;
 
   @include reset-link-style;
   text-align: center;
   text-transform: uppercase;
   border-top: 1px solid $border-color-block;
+
+
+  &:hover,
+  &:focus {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .site-list {
     flex-direction: row;
     justify-content: space-between;
-    width: 450px;
+    width: 440px;
     font-size: 18px;
     line-height: 25px;
   }
@@ -32,7 +42,7 @@
   .site-list__item a {
     padding: 0;
     padding-top: 33px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     margin: 0;
     border: none;
   }
@@ -44,11 +54,15 @@
 
 @media (min-width: $desktop-width) {
   .site-list {
+    width: 479px;
     font-size: 20px;
   }
 
+  .site-list__item a {
+    padding-top: 40px;
+  }
+
   .site-list--index {
-    width: 477px;
     color: $font-white;
   }
 

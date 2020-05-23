@@ -6,45 +6,72 @@
   &::after {
     @include pseudo-clases;
     bottom: 0;
-    left: -20px;
-    right: -20px;
+    left: 0;
+    right: 0;
     height: 1px;
     background-color: $border-color-block;
   }
 }
 
+.page-header__logo {
+  margin-left: 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
 .page-header__logo img {
   margin-top: 11px;
-  margin-bottom: 16px;
+  margin-bottom: 11px;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 30px;
 
     &::after {
       display: none;
     }
   }
 
+  .page-header__logo {
+    margin-left: 0;
+  }
+
   .page-header__logo img {
+    width: 173px;
+    height: 60px;
     margin-top: 24px;
     margin-bottom: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    max-width: $desktop-width;
+    padding: 0 110px;
+  }
+
   .page-header__logo img {
-    margin-top: 54px;
+    width: 202px;
+    height: 59px;
+    margin-top: 53px;
     margin-bottom: 54px;
   }
 
   .page-header--index {
     position: absolute;
-    top: 40px;
-    left: 110px;
-    right: 110px;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 90px;
     z-index: 3;
   }

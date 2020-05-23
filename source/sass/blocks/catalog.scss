@@ -1,10 +1,6 @@
-.catalog {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
 .catalog__list {
   @include reset-list-style;
+  margin-top: 28px;
 }
 
 .catalog__list-item {
@@ -13,6 +9,8 @@
   justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
+  padding-left: 19px;
+  padding-right: 19px;
   border: solid 1px $border-color-block;
   border-bottom: none;
 }
@@ -30,7 +28,7 @@
 
 .catalog__list-title {
   margin: 0;
-  margin-top: 23px;
+  margin-top: 21px;
   margin-bottom: 15px;
   color: $font-black;
   font-size: 16px;
@@ -46,7 +44,8 @@
 }
 
 .catalog__list-features {
-  margin-right: 20px;
+  margin-left: -1px;
+  margin-right: -2px;
   color: $font-grey;
   font-family: "Arial", sans-serif;
   font-size: 12px;
@@ -60,7 +59,9 @@
 }
 
 .catalog__list-button {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  width: 100%;
+  font-size: 16px;
 }
 
 .catalog__list-item--more {
@@ -70,8 +71,8 @@
   &::before {
     position: absolute;
     content: "";
-    top: 27px;
-    left: 145px;
+    top: 26px;
+    left: 144px;
     width: 30px;
     height: 30px;
     background-image: url("../img/icon-plus.svg");
@@ -82,8 +83,8 @@
 
 .catalog__list-item--more .catalog__list-title {
   margin: 0 auto;
-  margin-top: 83px;
-  margin-bottom: 11px;
+  margin-top: 79px;
+  margin-bottom: 8px;
 }
 
 .catalog__list-item--more p {
@@ -97,8 +98,18 @@
 }
 
 .catalog__list-button--more {
+  margin-bottom: 23px;
   color: $font-grey;
   background-color: $background-grey;
+}
+
+.button:hover.catalog__list-button--more,
+.button:focus.catalog__list-button--more {
+  background-color: $border-color-block;
+}
+
+.button:active.catalog__list-button--more {
+  color: rgba(68, 68, 68, 0.3);
 }
 
 @media (min-width: $tablet-width) {
@@ -112,11 +123,14 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 850px;
-    margin-top: 156px;
+    margin-top: 137px;
+    margin-bottom: 45px;
   }
 
   .catalog__list-item {
-    margin-bottom: 140px;
+    margin-bottom: 138px;
+    padding-left: 0;
+    padding-right: 0;
     width: 324px;
     flex-direction: column;
     justify-content: space-between;
@@ -125,6 +139,11 @@
 
     &:nth-child(2n-1) {
       margin-right: 60px;
+    }
+
+    &:nth-child(7),
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -139,7 +158,8 @@
 
   .catalog__list-title {
     width: 130px;
-    margin-bottom: 28px;
+    margin-top: 36px;
+    margin-bottom: 20px;
     font-size: 20px;
     text-align: center;
   }
@@ -149,7 +169,7 @@
   }
 
   .catalog__list-link .catalog__list-image {
-    margin-top: -15%;
+    margin-top: -14.2%;
     width: 324px;
   }
 
@@ -165,7 +185,10 @@
   }
 
   .catalog__list-features-item {
-    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
     border-bottom: 1px solid $border-color-input;
   }
 
@@ -176,6 +199,7 @@
   }
 
   .catalog__list-item--more {
+    justify-content: flex-start;
     background-color: $background-white;
     border: 1px solid $border-color-input;
 
@@ -190,18 +214,19 @@
 
   .catalog__list-item--more .catalog__list-title {
     width: 135px;
-    margin-top: 148px;
-    margin-bottom: 0;
+    margin-top: 164px;
+    margin-bottom: 27px;
   }
 
   .catalog__list-item--more p {
     width: 170px;
     font-size: 16px;
+    line-height: 18px;
     text-align: center;
   }
 
   .catalog__list-button--more {
-    margin-top: 30px;
+    margin-top: auto;
   }
 }
 
@@ -211,11 +236,23 @@
   }
 
   .catalog__list-item {
+    margin-bottom: 145px;
     width: 245px;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;
     }
+
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7),
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .catalog__list-title {
+    margin-bottom: 18px;
   }
 
   .catalog__list-link .catalog__list-image {
@@ -224,16 +261,22 @@
   }
 
   .catalog__list-item:nth-child(2n) .catalog__list-image {
-    margin-top: -35%;
+    margin-top: -34%;
   }
 
   .catalog__list-item--more {
     &::before {
       left: 93px;
+      top: 52px;
     }
+  }
+
+  .catalog__list-item--more .catalog__list-title {
+    margin-top: 161px;
   }
 
   .catalog__list-button {
     width: 169px;
+    margin-bottom: 41px;
   }
 }

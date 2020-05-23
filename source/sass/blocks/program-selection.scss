@@ -1,5 +1,6 @@
 .program-selection__text {
   margin: 0;
+  margin-top: 25px;
   width: 226px;
   color: $font-black;
   font-size: 14px;
@@ -9,7 +10,7 @@
 }
 
 .program-selection__form {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .program-selection__form-list {
@@ -35,41 +36,69 @@
 .program-selection__form-group textarea[name="comments"] {
   flex-grow: 1;
   height: 45px;
-  padding-left: 16px;
+  padding-left: 15px;
   color: $font-grey;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border: 1px solid $border-color-input;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+}
+
+.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]) {
+  &:hover {
+    border-color: $border-color-input;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $font-grey;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff8282;
+  }
+}
+
+.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):focus ~ svg path {
+  fill: $background-green;
+}
+
+.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):invalid:not(:placeholder-shown) ~ svg path {
+  fill: #ff8282;
 }
 
 .program-selection__form-group textarea[name="comments"] {
-  padding-top: 15px;
+  padding-top: 14px;
   width: 280px;
   height: 150px;
 }
 
 .program-selection__form-item label {
-  margin-right: 16px;
+  margin-right: 15px;
   color: $font-medium-black;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
+.program-selection__form-item--name label {
+  margin-right: 12px;
+}
+
 .program-selection__form-list--radio {
   width: 320px;
   margin-left: -20px;
   margin-right: -20px;
-  padding: 20px;
-  padding-left: 66px;
+  padding-top: 26px;
+  padding-left: 65px;
+  padding-bottom: 27px;
   border: 1px solid $border-color-block;
 }
 
 .program-selection__form-list--radio .program-selection__form-item,
 .program-selection__form-list--additionally .program-selection__form-item {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   &:last-child {
     margin-bottom: 0;
@@ -82,13 +111,23 @@
 
   &::before {
     @include pseudo-clases;
-    top: -8px;
+    top: -7px;
     left: -45px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid $border-color-input;
     background-color: $background-white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: #bababa;
+  }
+
+  &:active,
+  &:active::before {
+    opacity: 30%;
   }
 }
 
@@ -103,40 +142,35 @@
   background-color: $background-green;
 }
 
-.program-selection__form-list--contacts .program-selection__form-item--email {
+.program-selection__form-item--email,
+.program-selection__form-item--phone {
   position: relative;
-
-  &::after {
-    @include pseudo-clases;
-    top: 15px;
-    right: 15px;
-    width: 17px;
-    height: 13px;
-    background-image: url("../img/icon-mail.svg");
-  }
 }
 
-.program-selection__form-list--contacts .program-selection__form-item--phone {
-  position: relative;
+.program-selection__form-item--email label {
+  margin-right: 10px;
+}
 
-  &::after {
-    @include pseudo-clases;
-    top: 12px;
-    right: 12px;
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/icon-phone.svg");
-  }
+.program-selection__form-item--phone label {
+  margin-right: 8px;
+}
+
+.program-selection__form-item--email svg {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.program-selection__form-item--phone svg {
+  position: absolute;
+  top: 13px;
+  right: 13px;
 }
 
 .program-selection__form-list--additionally {
   margin-left: -20px;
   padding-left: 66px;
-  padding-bottom: 34px;
-}
-
-.program-selection__form-list--additionally .program-selection__form-item {
-  width: 283px;
+  padding-bottom: 40px;
 }
 
 .program-selection__form-list--additionally label {
@@ -157,16 +191,20 @@
 
 .program-selection__form-group {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 29px;
   padding: 0;
   border: none;
+}
+
+.program-selection__form-group--additionally {
+  margin-top: 25px;
 }
 
 .program-selection__form-title {
   display: flex;
   padding: 0;
-  width: 106%;
-  margin-bottom: 30px;
+  width: 107%;
+  margin-bottom: 33px;
   color: $font-black;
   font-size: 24px;
   line-height: 24px;
@@ -184,14 +222,19 @@
   }
 }
 
+.program-selection__form-group--additionally .program-selection__form-title {
+  margin-bottom: 41px;
+}
+
 .program-selection__form-button {
   width: 100%;
+  font-size: 16px;
 }
 
 .program-selection__form-info {
   display: block;
   margin-top: 22px;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
   color: $font-grey;
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -202,17 +245,44 @@
 @media (min-width: $tablet-width) {
   .program-selection {
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 36px;
   }
 
   .program-selection__text {
     width: 325px;
+    margin-top: 56px;
     font-size: 20px;
     line-height: 30px;
   }
 
   .program-selection__form {
-    margin-top: 69px;
+    margin-top: 65px;
+  }
+
+  .program-selection__form-title {
+    font-size: 36px;
+    line-height: 36px;
+    width: 122%;
+    margin-left: -70px;
+    margin-bottom: 75px;
+
+    &::before {
+      content: "";
+      margin-top: 21px;
+      width: 30px;
+      height: 3px;
+      margin-right: 38px;
+      background-color: $background-green;
+    }
+
+    &::after {
+      margin-top: 21px;
+      margin-left: 42px;
+    }
+  }
+
+  .program-selection__form-title--contacts br {
+    display: none;
   }
 
   .program-selection__form-item {
@@ -225,39 +295,68 @@
 
   .program-selection__form-item input:not([type="radio"]):not([type="checkbox"]),
   .program-selection__form-group textarea[name="comments"] {
+    height: 52px;
+    padding-left: 18px;
     font-size: 20px;
     line-height: 20px;
   }
 
   .program-selection__form-group textarea[name="comments"] {
+    padding-top: 15px;
     width: 630px;
     height: 174px;
   }
 
   .program-selection__form-item label {
+    margin-right: 20px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .program-selection__form-item--name label {
+    margin-right: 17px;
+  }
+
+  .program-selection__form-item--email label {
+    margin-right: 21px;
+  }
+
+  .program-selection__form-item--phone label {
+    margin-right: 15px;
+  }
+
+  .program-selection__form-item--email svg {
+    top: 20px;
+    right: 20px;
+  }
+
+  .program-selection__form-item--phone svg {
+    top: 17px;
+    right: 17px;
   }
 
   .program-selection__form-list--radio {
     width: 630px;
     margin: 0 auto;
+    padding-top: 33px;
     padding-left: 88px;
+    padding-bottom: 35px;
   }
 
   .program-selection__form-list--radio .program-selection__form-item,
   .program-selection__form-list--additionally .program-selection__form-item {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
     margin-right: 25px;
 
     &:last-child {
-      margin-bottom: 35px;
+      margin-bottom: 0;
     }
   }
 
   .program-selection__form-list--radio label,
   .program-selection__form-list--additionally label {
     &::before {
+      top: -9px;
       left: -60px;
       width: 40px;
       height: 40px;
@@ -277,11 +376,15 @@
     flex-wrap: wrap;
     margin-top: -20px;
     padding-left: 0;
-    padding-bottom: 54px;
+    padding-bottom: 64px;
+  }
+
+  .program-selection__form-list--additionally .program-selection__form-item:nth-child(2n-1) {
+    width: 315px;
   }
 
   .program-selection__form-list--additionally label {
-    padding-left: 80px;
+    padding-left: 79px;
 
     &::before {
       left: 20px;
@@ -293,25 +396,28 @@
   }
 
   .program-selection__form-group {
-    margin-top: 69px;
+    margin-top: 65px;
   }
 
-  .program-selection__form-title {
-    width: 123%;
-    margin-left: -70px;
-    margin-bottom: 70px;
+  .program-selection__form-group--contacts {
+    margin-top: 76px;
+  }
 
-    &::before {
-      content: "";
-      margin-top: 13px;
-      width: 30px;
-      height: 3px;
-      margin-right: 38px;
-      background-color: $background-green;
-    }
+  .program-selection__form-group--additionally {
+    margin-top: 62px;
+  }
 
-    &::after {
-      margin-left: 35px;
+  .program-selection__form-group--additionally .program-selection__form-title {
+    margin-bottom: 85px;
+  }
+
+  .program-selection__form-list--additionally .program-selection__form-item {
+    margin-bottom: 52px;
+    margin-right: 28px;
+
+    &:nth-child(3),
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -319,17 +425,21 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 71px;
   }
 
   .program-selection__form-button {
     margin: 0;
     width: 283px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .program-selection__form-info {
-    width: 283px;
+    width: 303px;
     margin: 0;
+    font-size: 16px;
   }
 }
 
@@ -345,7 +455,7 @@
   }
 
   .program-selection__form-list--inputs {
-    width: 48%;
+    width: 570px;
     margin: 0;
   }
 
@@ -355,8 +465,8 @@
     width: 570px;
     margin: 0;
     padding: 0;
-    padding-top: 20px;
-    padding-left: 88px;
+    padding-top: 33px;
+    padding-left: 87px;
     padding-bottom: 20px;
     margin-left: auto;
   }
@@ -368,12 +478,24 @@
   }
 
   .program-selection__form-title {
-    width: 117.2%;
+    width: 118%;
     margin-left: -110px;
 
     &::before {
       width: 70px;
     }
+  }
+
+  .program-selection__form-group {
+    margin-top: 68px;
+  }
+
+  .program-selection__form-group--additionally {
+    margin-top: 63px;
+  }
+
+  .program-selection__form-group--contacts {
+    margin-top: 69px;
   }
 
   .program-selection__form-list--contacts {
@@ -384,12 +506,43 @@
   }
 
   .program-selection__form-list--contacts .program-selection__form-item {
-    width: 46%;
+    width: 570px;
     margin: 0;
+  }
+
+  .program-selection__form-item--phone svg {
+    top: 19px;
+    right: 19px;
   }
 
   .program-selection__form-group textarea[name="comments"] {
     width: 1220px;
+  }
+
+  .program-selection__form-group--additionally .program-selection__form-title {
+    margin-bottom: 86px;
+  }
+
+  .program-selection__form-list--additionally {
+    padding-bottom: 72px;
+  }
+
+  .program-selection__form-list--additionally .program-selection__form-item {
+    margin-bottom: 0;
+  }
+
+  .program-selection__form-list--additionally .program-selection__form-item:not(:last-child) {
+    width: 325px;
+    margin-right: 0;
+  }
+
+  .program-selection__bottom-wrapper {
+    margin-bottom: 82px;
+  }
+
+  .program-selection__form-info {
+    padding-bottom: 4px;
+    width: 346px;
   }
 
   .program-selection__form-button {

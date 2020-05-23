@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="container">
+<body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
       <picture>
@@ -36,7 +36,8 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__title">Каталог продукции</h1>
+    <h1 class="page-main__title page-main__title--catalog
+">Каталог продукции</h1>
     <section class="page-main__catalog catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog__list">
@@ -288,7 +289,7 @@
       <h2 class="additional-goods__title">
         Дополнительные товары
       </h2>
-      <div class="additional-goods__wrapper">
+      <div class="additional-goods__wrapper container">
         <ul class="additional-goods__list">
           <li class="additional-goods__list-item">
             <h3 class="additional-goods__list-title">
@@ -308,7 +309,7 @@
             <h3 class="additional-goods__list-title">
               Питьевая вода
             </h3>
-            <table class="additional-goods__list-features">
+            <table class="additional-goods__list-features additional-goods__list-features--water">
               <tr>
                 <td>5 литров</td>
                 <td>50 Р.</td>
@@ -354,7 +355,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts contacts--bg-grey">
+    <section class="contacts contacts--catalog">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__address">
         <h3 class="contacts__address-appeal">
@@ -370,7 +371,7 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--catalog container">
     <a class="page-footer__logo" href="index.html">
       <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Интернет-магазин «Кэт энерджи»">
     </a>
