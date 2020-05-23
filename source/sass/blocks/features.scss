@@ -64,7 +64,6 @@
 @media (min-width: $tablet-width) {
   .features {
     position: relative;
-    padding-bottom: 14px;
 
     &::after {
       @include pseudo-clases;
@@ -72,7 +71,7 @@
       height: 1px;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 32px;
       background-color: $border-color-block;
     }
   }
@@ -91,13 +90,8 @@
 
   .features__list-item {
     width: 305px;
-    margin-bottom: 85px;
+    margin-bottom: 131px;
     padding-top: 0;
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      margin-bottom: 131px;
-    }
   }
 
   .features__list-item::after {
@@ -151,7 +145,7 @@
 
 @media (min-width: $desktop-width) {
   .features {
-    padding-bottom: 0;
+    padding-bottom: 7px;
 
     &::after {
       display: none;

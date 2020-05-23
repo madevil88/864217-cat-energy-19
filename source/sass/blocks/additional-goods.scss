@@ -96,6 +96,7 @@
 
 @media (min-width: $tablet-width) {
   .additional-goods__title {
+    margin-top: -65px;
     margin-bottom: 85px;
     margin-left: 0;
     font-size: 36px;
@@ -185,7 +186,7 @@
   }
 
   .additional-goods__title {
-    margin-top: 36px;
+    margin-top: -64px;
 
     &::before {
       margin-top: 16px;

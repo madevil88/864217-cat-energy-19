@@ -30,19 +30,15 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-main {
-    max-width: $desktop-width;
-  }
-
   .page-main__title {
     margin-left: 110px;
   }
 
   .page-main__title--form {
-    margin-top: 1px;
+    margin-top: 43px;
   }
 
   .page-main__title--catalog {
-    margin-top: 3px;
+    margin-top: 45px;
   }
 }

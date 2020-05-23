@@ -1,5 +1,6 @@
 .page-footer {
   background-color: $background-grey;
+  padding: 0 20px;
 }
 
 .page-footer__logo {
@@ -93,7 +94,16 @@
   .page-footer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: $desktop-width;
+    padding: 0 30px;
   }
 
   .page-footer__logo {
@@ -103,6 +113,11 @@
 
   .page-footer--catalog .page-footer__logo {
     padding-top: 61px;
+  }
+
+  .page-footer__social-buttons {
+    display: flex;
+    align-items: center;
   }
 
   .page-footer__social-buttons-list {
@@ -142,7 +157,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-footer {
-    max-width: $desktop-width;
+  .page-footer__wrapper {
+    padding: 0 110px;
   }
 }
