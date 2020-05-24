@@ -102,16 +102,17 @@
     padding-top: 129px;
     margin-bottom: 130px;
     height: 645px;
-    background-image: linear-gradient(to right, transparent 50%, #63a73a 50%);
 
     &::before {
       @include pseudo-clases;
       top: 0;
       right: 0;
-      width: 720px;
+      width: 50%;
       height: 696px;
       background-color: #63a73a;
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: contain;
+      background-position: right;
     }
   }
 
