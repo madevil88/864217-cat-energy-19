@@ -7,10 +7,15 @@
   position: relative;
   height: 305px;
   margin-bottom: 135px;
-  background-color: #63a73a;
+  background-color: #65a93c;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .offer__title {
