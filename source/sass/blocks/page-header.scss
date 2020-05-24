@@ -67,8 +67,13 @@
   }
 
   .page-header--index {
+    position: absolute;
+    margin-left: -720px;
+    width: 1440px;
+    top: 0;
+    left: 50%;
     justify-content: center;
-    background-image: linear-gradient(to right, transparent 50%, #63a73a 50%);
+    background-color: transparent;
     z-index: 1;
   }
 

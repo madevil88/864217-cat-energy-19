@@ -76,7 +76,7 @@
 
 .program-selection__form-group textarea[name="comments"] {
   padding-top: 14px;
-  width: 280px;
+  width: 100%;
   height: 150px;
 }
 
@@ -207,25 +207,26 @@
 }
 
 .program-selection__form-title {
-  display: flex;
-  padding: 0;
-  width: 100%;
+  position: relative;
+  display: table;
+  margin-top: 28px;
+  padding-left: 0;
+  padding-right: 22px;
   margin-bottom: 33px;
   color: $font-black;
   font-size: 24px;
   line-height: 24px;
   font-weight: 100;
+  background-color: #ffffff;
 
   &::after {
-    flex-grow: 1;
-    flex-shrink: 0;
-    content: "";
-    margin-top: 13px;
-    width: 53px;
+    @include pseudo-clases;
+    top: 14px;
+    left: 0;
+    width: calc(100vw - 20px);
     height: 3px;
-    margin-left: 21px;
-    margin-right: -20px;
     background-color: $background-green;
+    z-index: -1;
   }
 }
 
@@ -269,25 +270,17 @@
   }
 
   .program-selection__form-title {
+    padding-left: 39px;
+    padding-right: 40px;
+    margin-left: -40px;
+    margin-bottom: 75px;
     font-size: 36px;
     line-height: 36px;
-    width: 100%;
-    margin-bottom: 75px;
-
-    &::before {
-      content: "";
-      margin-top: 21px;
-      width: 30px;
-      height: 3px;
-      margin-left: -70px;
-      margin-right: 38px;
-      background-color: $background-green;
-    }
 
     &::after {
-      margin-top: 21px;
-      margin-left: 42px;
-      margin-right: -66px;
+      top: 21px;
+      left: -28vw;
+      width: 125vw;
     }
   }
 
@@ -313,7 +306,6 @@
 
   .program-selection__form-group textarea[name="comments"] {
     padding-top: 15px;
-    width: 630px;
     height: 174px;
   }
 
@@ -456,12 +448,14 @@
   .program-selection {
     padding-left: 0;
     padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $desktop-width;
   }
 
   .program-selection__text {
-    margin-left: 110px;
+    width: 450px;
+    padding-left: 110px;
   }
 
   .program-selection__content-wrapper {
@@ -499,15 +493,10 @@
   }
 
   .program-selection__form-title {
-    width: 100%;
-
-    &::before {
-      margin-left: 0;
-      width: 70px;
-    }
+    margin-left: 70px;
 
     &::after {
-      margin-right: 0;
+      width: 123vw;
     }
   }
 

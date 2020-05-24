@@ -41,6 +41,7 @@
 }
 
 .offer__button {
+  width: 100%;
   margin-bottom: 22px;
 }
 
@@ -68,7 +69,7 @@
 
   .offer__title {
     width: 415px;
-    margin-left: 117px;
+    margin-left: 87px;
     padding-top: 27px;
     padding-bottom: 42px;
     font-size: 60px;
@@ -78,7 +79,7 @@
 
   .offer__slogan {
     width: 285px;
-    margin-left: 118px;
+    margin-left: 88px;
     font-size: 20px;
     line-height: 20px;
     text-align: left;
@@ -87,7 +88,7 @@
   .offer__button {
     width: 245px;
     height: 52px;
-    margin-left: 120px;
+    margin-left: 90px;
     padding-bottom: 3px;
     padding-right: 6px;
     font-size: 20px;
@@ -97,15 +98,28 @@
 
 @media (min-width: $desktop-width) {
   .offer {
+    position: relative;
+    padding-top: 129px;
+    margin-bottom: 130px;
     height: 645px;
-    max-width: $desktop-width;
+    background-image: linear-gradient(to right, transparent 50%, #63a73a 50%);
+
+    &::before {
+      @include pseudo-clases;
+      top: 0;
+      right: 0;
+      width: 720px;
+      height: 696px;
+      background-color: #63a73a;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+    }
   }
 
   .offer__image {
     width: 552px;
     height: 499px;
-    top: 12px;
-    left: 560px;
+    top: 141px;
+    left: calc(50% - 160px);
     z-index: 1;
   }
 
@@ -114,6 +128,7 @@
     height: auto;
     margin-bottom: 53px;
     padding-left: 80px;
+    max-width: $desktop-width;
     background: none;
   }
 
@@ -128,6 +143,6 @@
   }
 
   .offer__button {
-    margin-left: 190px;
+    margin-left: 80px;
   }
 }

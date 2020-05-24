@@ -146,6 +146,7 @@
 @media (min-width: $desktop-width) {
   .features {
     padding-bottom: 7px;
+    max-width: $desktop-width;
 
     &::after {
       display: none;

@@ -31,7 +31,9 @@
 
 @media (min-width: $desktop-width) {
   .page-main__title {
-    margin-left: 110px;
+    margin: 0 auto;
+    max-width: $desktop-width;
+    padding-left: 110px;
   }
 
   .page-main__title--form {
@@ -39,6 +41,7 @@
   }
 
   .page-main__title--catalog {
+    margin-bottom: 28px;
     margin-top: 45px;
   }
 }
