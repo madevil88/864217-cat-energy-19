@@ -44,6 +44,11 @@
   background-position: 50% 45%, 50% 105%;
   background-size: 20%, 100%;
   background-clip: content-box;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
+    background-size: 20%, 100%;
+  }
 }
 
 .contacts__map iframe {
@@ -102,6 +107,11 @@
     background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
     background-position: 50% 51%, 50% 50%;
     background-size: 16%, 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
+      background-size: 16%, 100%;
+    }
   }
 }
 
@@ -130,5 +140,10 @@
     background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
     background-position: 75.9% 50.9%, 50% 50%;
     background-size: 8.7%, 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@2x.png");
+      background-size: 8.7%, 100%;
+    }
   }
 }

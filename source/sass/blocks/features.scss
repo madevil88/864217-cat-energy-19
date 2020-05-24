@@ -32,18 +32,38 @@
 
 .features__list-item--leaf::after {
   background-image: url("../img/advantage-leaf@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-leaf@2x.png");
+    background-size: 80%;
+  }
 }
 
 .features__list-item--powder::after {
   background-image: url("../img/advantage-powder@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-powder@2x.png");
+    background-size: 80%;
+  }
 }
 
 .features__list-item--dining::after {
   background-image: url("../img/advantage-dining@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-dining@2x.png");
+    background-size: 80%;
+  }
 }
 
 .features__list-item--clock::after {
   background-image: url("../img/advantage-clock@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-clock@2x.png");
+    background-size: 80%;
+  }
 }
 
 .features__list-description {
