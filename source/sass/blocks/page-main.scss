@@ -1,25 +1,47 @@
+.page-main {
+  margin: 0 auto;
+}
+
 .page-main__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-left: 20px;
+  padding-top: 16px;
   color: $font-black;
   font-size: 36px;
   line-height: 60px;
   font-weight: 100;
 }
 
-.page-main__title--form {
-  padding-left: 0;
-  margin-left: 20px;
-}
-
 @media (min-width: $tablet-width) {
   .page-main__title {
+    margin-top: 1px;
+    margin-left: 30px;
     font-size: 60px;
+  }
+
+  .page-main__title--form {
+    margin-top: 11px;
+  }
+
+  .page-main__title--catalog {
+    margin-top: 11px;
+    margin-bottom: 28px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .page-main__title {
+    margin: 0 auto;
+    max-width: $desktop-width;
+    padding-left: 110px;
+  }
+
   .page-main__title--form {
-    margin-left: 0;
+    margin-top: 43px;
+  }
+
+  .page-main__title--catalog {
+    margin-bottom: 28px;
+    margin-top: 45px;
   }
 }
