@@ -46,6 +46,7 @@
 .catalog__list-features {
   margin-left: -1px;
   margin-right: -2px;
+  width: 102%;
   color: $font-grey;
   font-family: "Arial", sans-serif;
   font-size: 12px;
@@ -75,7 +76,7 @@
     left: 144px;
     width: 30px;
     height: 30px;
-    background-image: url("../img/icon-plus.svg");
+    background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -151,7 +152,7 @@
   }
 
   .catalog__list-title {
-    width: 130px;
+    width: 140px;
     margin-top: 36px;
     margin-bottom: 20px;
     font-size: 20px;
@@ -174,6 +175,7 @@
   .catalog__list-features {
     margin-left: 38px;
     margin-right: 37px;
+    width: 250px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -207,7 +209,7 @@
   }
 
   .catalog__list-item--more .catalog__list-title {
-    width: 135px;
+    width: 140px;
     margin-top: 164px;
     margin-bottom: 27px;
   }
@@ -241,6 +243,10 @@
 
   .catalog__list-title {
     margin-bottom: 18px;
+  }
+
+  .catalog__list-features {
+    width: 169px;
   }
 
   .catalog__list-link .catalog__list-image {

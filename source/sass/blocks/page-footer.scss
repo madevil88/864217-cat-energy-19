@@ -44,13 +44,13 @@
   padding-right: 7px;
 }
 
-.page-footer__social-buttons-button-icon path {
-  fill: #666666;
+.page-footer__social-buttons-button-icon {
+  color: #666666;
 }
 
-.page-footer__social-buttons-button:hover path,
-.page-footer__social-buttons-button:focus path {
-  fill: $background-green;
+.page-footer__social-buttons-button:hover .page-footer__social-buttons-button-icon,
+.page-footer__social-buttons-button:focus .page-footer__social-buttons-button-icon {
+  color: $background-green;
 }
 
 .page-footer__developer-link {
@@ -65,10 +65,6 @@
   }
 }
 
-.page-footer__developer-link:hover path,
-.page-footer__developer-link:focus path {
-  fill: $background-green;
-}
 
 .page-footer__developer-link-title {
   color: $font-grey;
@@ -84,10 +80,12 @@
   margin-top: 18px;
   margin-right: -6px;
   margin-bottom: 14px;
+  color: #666666;
 }
 
-.page-footer__developer-link-image path {
-  fill: #666666;
+.page-footer__developer-link:hover .page-footer__developer-link-image,
+.page-footer__developer-link:focus .page-footer__developer-link-image {
+  color: $background-green;
 }
 
 @media (min-width: $tablet-width) {
