@@ -41,7 +41,7 @@
 
 .complexes__item-description {
   margin-left: 21px;
-  margin-right: 34px;
+  margin-right: 25px;
   margin-bottom: 21px;
   color: $font-grey;
   font-family: "Arial", sans-serif;
@@ -75,14 +75,14 @@
   margin-left: 12px;
   width: 24px;
   height: 11px;
-  background-image: url("../img/icon-right-arrow-long.svg");
+  background-image: url("../img/right-arrow-long.svg");
   background-repeat: no-repeat;
 }
 
 .complexes__item-link:hover .complexes__item-link-arrow,
 .complexes__item-link:focus .complexes__item-link-arrow {
   width: 33px;
-  background-image: url("../img/icon-right-arrow-verylong.svg");
+  background-image: url("../img/right-arrow-verylong.svg");
 }
 
 @media (min-width: $tablet-width) {

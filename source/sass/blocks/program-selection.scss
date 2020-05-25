@@ -66,12 +66,12 @@
   }
 }
 
-.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):focus ~ svg path {
-  fill: $background-green;
+.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):focus ~ svg {
+  color: $background-green;
 }
 
-.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):invalid:not(:placeholder-shown) ~ svg path {
-  fill: #ff8282;
+.program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):invalid:not(:placeholder-shown) ~ svg {
+  color: #ff8282;
 }
 
 .program-selection__form-group textarea[name="comments"] {
@@ -86,6 +86,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  white-space: pre;
 }
 
 .program-selection__form-item--name label {
@@ -192,7 +193,7 @@
   height: 16px;
   border-radius: 0;
   background-color: transparent;
-  background-image: url("../img/icon-tick.svg");
+  background-image: url("../img/tick.svg");
 }
 
 .program-selection__form-group {
@@ -203,13 +204,12 @@
 }
 
 .program-selection__form-group--additionally {
-  margin-top: 25px;
+  margin-top: 26px;
 }
 
 .program-selection__form-title {
   position: relative;
   display: table;
-  margin-top: 28px;
   padding-left: 0;
   padding-right: 22px;
   margin-bottom: 33px;
@@ -406,7 +406,7 @@
   }
 
   .program-selection__form-group--additionally {
-    margin-top: 62px;
+    margin-top: 63px;
   }
 
   .program-selection__form-group--additionally .program-selection__form-title {
