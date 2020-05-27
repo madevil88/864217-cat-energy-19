@@ -33,7 +33,7 @@
   color: $font-black;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -51,7 +51,7 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 13px;
-  font-weight: 100;
+  font-weight: 400;
   border-collapse: collapse;
 }
 
@@ -95,7 +95,7 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .catalog__list-button--more {
@@ -153,6 +153,7 @@
 
   .catalog__list-title {
     width: 140px;
+    margin: 0 auto;
     margin-top: 36px;
     margin-bottom: 20px;
     font-size: 20px;
@@ -181,9 +182,6 @@
   }
 
   .catalog__list-features-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 32px;
     border-bottom: 1px solid $border-color-input;
   }

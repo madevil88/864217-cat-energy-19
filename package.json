@@ -47,6 +47,7 @@
     "node": "8.16"
   },
   "dependencies": {
-    "imagemin-webp": "^6.0.0"
+    "imagemin-webp": "^6.0.0",
+    "object-fit-images": "^3.2.4"
   }
 }

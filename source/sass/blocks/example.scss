@@ -14,7 +14,7 @@
   color: $font-black;
   font-size: 36px;
   line-height: 60px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .example__description {
@@ -26,7 +26,7 @@
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .example__result-columns {
@@ -43,6 +43,7 @@
   width: 124px;
   margin-bottom: 32px;
   border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__result--days {
@@ -57,7 +58,7 @@
   color: $font-black;
   font-size: 24px;
   line-height: 24px;
-  font-weight: 100;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -71,7 +72,7 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   background-color: $background-grey;
 }
@@ -85,7 +86,7 @@
   color: $font-black;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 100;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -95,8 +96,10 @@
 
 .example__result-image {
   position: relative;
+  margin: 0 auto;
   width: 320px;
   height: 240px;
+  background-color: $background-grey;
 }
 
 .example__result-image-before,
@@ -106,19 +109,28 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: $background-grey;
+  background-position: 50% 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .example__result-image-after {
   width: 0;
+  background-image: url("../img/after-mobile@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+    background-size: 100%;
+  }
 }
 
-.example__result-image-before img,
-.example__result-image-after img {
-  display: flex;
-  justify-content: center;
-  object-fit: cover;
-  object-position: 100% 0;
+.example__result-image-before {
+  background-image: url("../img/before-mobile@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 100%;
+  }
 }
 
 .example__range-slider {
@@ -189,6 +201,7 @@
     margin-left: 30px;
     margin-right: 50px;
     margin-bottom: 53px;
+    width: 688px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -222,6 +235,7 @@
     left: 9px;
     font-size: 14px;
     line-height: 14px;
+    background-color: $background-white;
   }
 
   .example__result--weight .example__result-text {
@@ -247,58 +261,36 @@
   }
 
   .example__result-image {
-    margin: 0 auto;
     width: 768px;
-    height: 462px;
+    height: 461px;
     background-color: $background-grey;
   }
 
-  .example__result-image-before,
-  .example__result-image-after {
-    width: 690px;
-  }
-
   .example__result-image-before {
-    left: 39px;
-  }
-
-  .example__result-image-after {
-    width: 50%;
-
-    &::before {
-      @include pseudo-clases;
-      top: -170px;
-      width: 100%;
-      height: 170px;
-      background-color: $background-white;
-    }
-
-    &::after {
-      @include pseudo-clases;
-      top: 0;
-      width: 100%;
-      height: 462px;
-      background-color: $border-color-block;
-      z-index: 1;
-    }
-  }
-
-  .example__result-image-before img,
-  .example__result-image-after img {
-    position: absolute;
-    top: -170px;
+    top: -169px;
+    right: 32px;
     width: 690px;
     height: 517px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../img/before-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
   }
 
-  .example__result-image-before img {
-    left: 8px;
-  }
+  .example__result-image-after {
+    top: -169px;
+    width: 50%;
+    height: 517px;
+    background-position: 110% 50%;
+    background-size: cover;
+    background-image: url("../img/after-tablet@1x.png"), linear-gradient(to bottom, #ffffff 170px, $border-color-block 170px);
 
-  .example__result-image-after img {
-    top: -170px;
-    object-position: 110% 0;
-    z-index: 2;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, #ffffff 170px, $border-color-block 170px);
+    }
   }
 
   .example__range-slider {
@@ -394,22 +386,21 @@
 
   .example__wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 100%;
+    width: auto;
     max-width: $desktop-width;
-    height: 462px;
     padding-left: 110px;
     background-color: $background-grey;
     box-shadow: 1000px 0 0 0 $border-color-block;
-    background-image: linear-gradient(to right, transparent 50%, $border-color-block 50%);
+    background-image: linear-gradient(to right, transparent 72.5%, $border-color-block 72.5%);
   }
 
   .example__description {
     width: 435px;
-    margin-top: 41px;
+    margin-top: 70px;
     margin-left: 0;
     margin-right: 75px;
     margin-bottom: 68px;
@@ -419,6 +410,10 @@
     width: 370px;
     margin-left: 0;
     margin-bottom: 0;
+  }
+
+  .example__result-text {
+    background-color: $background-grey;
   }
 
   .example__result-money {
@@ -431,19 +426,28 @@
 
   .example__result-image {
     margin-left: 30px;
+    background: none;
   }
 
-  .example__result-image-before img,
-  .example__result-image-after img {
-    top: -191px;
+  .example__result-image-before {
+    top: -192px;
+    right: 48px;
+    background-image: url("../img/before-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+    }
   }
 
-  .example__result-image-before img {
-    left: -20px;
-  }
+  .example__result-image-after {
+    top: -192px;
+    right: -12px;
+    background-position: 120% 50%;
+    background-image: url("../img/after-desktop@1x.png"), linear-gradient(to bottom, #ffffff 192px, $border-color-block 192px);
 
-  .example__result-image-after img {
-    object-position: 119% 0;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-desktop@2x.png"), linear-gradient(to bottom, #ffffff 192px, $border-color-block 192px);
+    }
   }
 
   .example__range-slider {
