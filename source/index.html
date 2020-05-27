@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи</title>
   <link rel="preload" href="../fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="../fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="../fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="../fonts/oswaldmedium.woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
@@ -158,7 +157,9 @@
             Было
           </button>
           <div class="example__range-slider-track">
-            <button class="example__range-slider-track-pin" type="button"></button>
+            <button class="example__range-slider-track-pin" type="button">
+              <span class="visually-hidden">Управление результатом</span>
+            </button>
           </div>
           <button class="example__range-slider-button example__range-slider-button--after" type="button">
             Стало

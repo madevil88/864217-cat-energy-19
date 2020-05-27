@@ -264,6 +264,7 @@
     width: 768px;
     height: 461px;
     background-color: $background-grey;
+    background-image: linear-gradient(to right, transparent 50%, $border-color-block 50%);
   }
 
   .example__result-image-before {
@@ -392,10 +393,10 @@
     margin: 0 auto;
     width: auto;
     max-width: $desktop-width;
-    padding-left: 110px;
+    padding-left: 91px;
     background-color: $background-grey;
     box-shadow: 1000px 0 0 0 $border-color-block;
-    background-image: linear-gradient(to right, transparent 72.5%, $border-color-block 72.5%);
+    background-image: linear-gradient(to right, transparent 73.5%, $border-color-block 73.5%);
   }
 
   .example__description {
@@ -452,6 +453,6 @@
 
   .example__range-slider {
     left: auto;
-    right: 111px;
+    right: 89px;
   }
 }

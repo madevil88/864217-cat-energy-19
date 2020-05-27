@@ -66,6 +66,14 @@
   }
 }
 
+.program-selection__form-item input[type="radio"],
+.program-selection__form-item input[type="checkbox"] {
+  &:focus + label::before {
+    outline: none;
+    border: 2px solid $font-grey;
+  }
+}
+
 .program-selection__form-item input:not([type="radio"]):not([type="checkbox"]):focus ~ svg {
   color: $background-green;
 }
@@ -86,6 +94,9 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.program-selection__form-list--inputs label {
   white-space: pre;
 }
 
